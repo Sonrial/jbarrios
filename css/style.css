@@ -145,3 +145,57 @@ footer { text-align: center; padding: 20px; font-size: 0.9rem; opacity: 0.7; }
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.skill-box {
+    width: 100%;
+    margin: 25px 0;
+}
+
+.skill-box .title {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.skill-bar {
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-per {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 0; /* Empieza en 0 para animar */
+    border-radius: 6px;
+    background: var(--primary);
+    transition: width 2s ease-in-out; /* La animación mágica */
+}
+
+/* Anchos finales (puedes ajustar los porcentajes aquí) */
+.python { width: 85%; }
+.pvsyst { width: 90%; }
+.excel { width: 95%; }
+
+.tooltip {
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--bg-color);
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: var(--primary);
+    z-index: 1;
+}
