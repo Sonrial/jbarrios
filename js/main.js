@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hiddenElements.forEach((el) => observer.observe(el));
 
     // --- 2. EFECTO TYPEWRITER (ESCRITURA) ---
-    const textToType = "INGENIERO DE ENERGÍAS & DATOS";
+    const textToType = "INGENIERO DE ENERGÍAS & SOSTENIBILIDAD";
     const typeWriterElement = document.querySelector('.typewriter');
     
     // Verificamos que el elemento exista antes de intentar escribir
