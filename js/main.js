@@ -22,3 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Decirle al observador que vigile a cada elemento
     hiddenElements.forEach((el) => observer.observe(el));
 });
+
+// Efecto Typewriter
+const textToType = "INGENIERO DE ENERGÍAS & DATOS";
+const typeWriterElement = document.querySelector('.typewriter');
+let i = 0;
+
+function typeWriter() {
+    if (i < textToType.length) {
+        typeWriterElement.innerHTML += textToType.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100); // Velocidad de escritura (ms)
+    }
+}
+
+// Iniciar cuando cargue la página
+window.onload = function() {
+    typeWriter();
+};
