@@ -1,0 +1,115 @@
+:root {
+    --bg-color: #1D1616;
+    --card-bg: #251e1e; /* Un poco más claro para contraste */
+    --primary: #D84040; /* Rojo Brillante */
+    --secondary: #8E1616; /* Rojo Oscuro */
+    --text: #EEEEEE;
+    --font-main: 'Montserrat', sans-serif;
+    --font-tech: 'Share Tech Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita scroll horizontal indeseado */
+}
+
+/* Tipografía y Utilidades */
+h1, h2, h3 { font-family: var(--font-tech); text-transform: uppercase; }
+.highlight { color: var(--primary); }
+a { text-decoration: none; color: inherit; }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: rgba(29, 22, 22, 0.95);
+    z-index: 1000;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; font-family: var(--font-tech); }
+.punto { color: var(--primary); }
+
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a:hover { color: var(--primary); transition: 0.3s; }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+.btn {
+    padding: 12px 30px;
+    border: 1px solid var(--primary);
+    margin-right: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+.btn.primary { background: var(--primary); color: var(--bg-color); }
+.btn.primary:hover { background: transparent; color: var(--primary); }
+.btn.secondary { color: var(--text); }
+.btn.secondary:hover { background: var(--secondary); }
+
+/* Timeline Experiencia */
+.section-dark { background: #181212; padding: 80px 10%; }
+.timeline { border-left: 2px solid var(--secondary); margin-left: 20px; padding-left: 40px; }
+.timeline-item { margin-bottom: 40px; position: relative; }
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -49px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+.timeline-date { color: var(--primary); font-family: var(--font-tech); font-size: 0.9rem; }
+
+/* Proyectos Grid */
+#proyectos { padding: 80px 10%; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border: 1px solid var(--secondary);
+    transition: 0.3s;
+}
+.card:hover { transform: translateY(-10px); border-color: var(--primary); }
+.tech-stack span {
+    font-size: 0.8rem;
+    background: var(--secondary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* ANIMACIONES (Estados Iniciales) */
+.hidden-text { opacity: 0; transform: translateY(30px); transition: all 1s ease; }
+.hidden-card { opacity: 0; transform: translateX(-50px); transition: all 1s ease; }
+.hidden-img  { opacity: 0; transform: scale(0.8); transition: all 1s ease; }
+
+/* Clases activas (JS las añadirá) */
+.show { opacity: 1; transform: translateY(0) translateX(0) scale(1); }
+
+footer { text-align: center; padding: 20px; font-size: 0.9rem; opacity: 0.7; }
