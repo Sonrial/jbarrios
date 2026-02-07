@@ -134,3 +134,14 @@ footer { text-align: center; padding: 20px; font-size: 0.9rem; opacity: 0.7; }
     top: 20%;
     z-index: -1; /* Se queda detrás del texto */
 }
+
+/* Cursor parpadeante estilo consola */
+.cursor {
+    color: var(--primary);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
