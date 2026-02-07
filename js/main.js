@@ -1,42 +1,35 @@
-// Esperar a que cargue el DOM
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Seleccionar todos los elementos que queremos animar
+    // --- 1. ANIMACIÓN DE SCROLL (INTERSECTION OBSERVER) ---
     const hiddenElements = document.querySelectorAll('.hidden-text, .hidden-card, .hidden-img');
 
-    // Crear el observador
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            console.log(entry)
-            // Si el elemento es visible
             if (entry.isIntersecting) {
-                entry.target.classList.add('show'); // Añadir clase 'show'
-            } 
-            // Opcional: Si quieres que la animación se repita al subir y bajar, quita el 'else'
-            // else {
-            //     entry.target.classList.remove('show');
-            // }
+                entry.target.classList.add('show');
+                // Dejamos de observar una vez que se muestra para ahorrar recursos
+                observer.unobserve(entry.target);
+            }
         });
     });
 
-    // Decirle al observador que vigile a cada elemento
     hiddenElements.forEach((el) => observer.observe(el));
-});
 
-// Efecto Typewriter
-const textToType = "INGENIERO DE ENERGÍAS & DATOS";
-const typeWriterElement = document.querySelector('.typewriter');
-let i = 0;
-
-function typeWriter() {
-    if (i < textToType.length) {
-        typeWriterElement.innerHTML += textToType.charAt(i);
-        i++;
-        setTimeout(typeWriter, 100); // Velocidad de escritura (ms)
+    // --- 2. EFECTO TYPEWRITER (ESCRITURA) ---
+    const textToType = "INGENIERO DE ENERGÍAS & DATOS";
+    const typeWriterElement = document.querySelector('.typewriter');
+    
+    // Verificamos que el elemento exista antes de intentar escribir
+    if (typeWriterElement) {
+        let i = 0;
+        function typeWriter() {
+            if (i < textToType.length) {
+                typeWriterElement.innerHTML += textToType.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100); // Velocidad (ms)
+            }
+        }
+        // Iniciar escritura (pequeño retraso para dar sensación de carga)
+        setTimeout(typeWriter, 500); 
     }
-}
-
-// Iniciar cuando cargue la página
-window.onload = function() {
-    typeWriter();
-};
+});
