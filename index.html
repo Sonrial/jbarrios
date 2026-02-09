@@ -22,22 +22,14 @@
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1 class="hidden-text">
-                HOLA, SOY <span class="highlight">JOSÉ DAVID</span>
-            </h1>
-            
-            <h2 class="sub-hero hidden-text">
-                <span class="typewriter"></span><span class="cursor">|</span>
-            </h2>
-
-            <p class="hidden-text">Especialista en análisis de datos, modelado PVsyst y soluciones Python.</p>
-            
+            <h1 class="hidden-text">HOLA, SOY <span class="highlight">JOSÉ DAVID</span></h1>
+            <h2 class="sub-hero hidden-text"><span class="typewriter"></span><span class="cursor">|</span></h2>
+            <p class="hidden-text">Ingeniero especializado en Energías Renovables, Simulación Avanzada y Ciencia de Datos aplicada.</p>
             <div class="cta-group hidden-text">
                 <a href="#contacto" class="btn primary">Contáctame</a>
                 <a href="assets/CV_José_David_Barrios_Franco.pdf" target="_blank" class="btn secondary">Ver CV</a>
             </div>
         </div>
-        
         <div class="hero-graphic hidden-img">
             <div class="circle-tech"></div>
         </div>
@@ -46,81 +38,87 @@
     <section id="experiencia" class="section-dark">
         <h2 class="section-title hidden-text">Trayectoria <span class="highlight">Profesional</span></h2>
         <div class="timeline">
-            
             <div class="timeline-item hidden-card">
                 <div class="timeline-date">Jul 2025 - Nov 2025</div>
                 <div class="timeline-content">
                     <h3>Ingeniero en Energías (Practicante)</h3>
                     <h4>Acueducto Metropolitano de Bucaramanga</h4>
-                    <p>Desarrollo de estudio de viabilidad para sistema FV en PTAP "La Flora". Modelado de 3 variantes en PVsyst (214-423 kWp) y análisis financiero (LCOE, VPN).</p>
+                    <p>Lideré el estudio de viabilidad para sistema FV en PTAP "La Flora". Modelado de 3 variantes (214, 253 y 423 kWp) en PVsyst. Análisis financiero (LCOE, VPN) y técnico bajo normativa CREG 015/2018.</p>
                 </div>
             </div>
-
-            <div class="timeline-item hidden-card">
-                <div class="timeline-date">Dic 2025</div>
-                <div class="timeline-content">
-                    <h3>Graduación de Ingeniería</h3>
-                    <h4>Universidad (Facultad de Ingeniería)</h4>
-                    <p>Título obtenido con Tesis sobre diseño de comunidades energéticas en zonas no interconectadas (Nazareth y Puerto Estrella).</p>
-                </div>
             </div>
-
-        </div>
     </section>
 
-    <section id="habilidades" class="section-dark">
+    <section id="habilidades">
         <h2 class="section-title hidden-text">Arsenal <span class="highlight">Técnico</span></h2>
-        <div class="skills-container">
         
-            <div class="skill-box hidden-card">
-                <span class="title">Python (Pandas, Matplotlib)</span>
-                <div class="skill-bar">
-                    <span class="skill-per python">
-                        <span class="tooltip">85%</span>
-                    </span>
+        <div class="skills-grid">
+            <div class="skill-category hidden-card">
+                <h3><span class="highlight">//</span> Ingeniería & Simulación</h3>
+                <div class="skill-tags">
+                    <span>PVsyst</span>
+                    <span>DialuxEVO</span>
+                    <span>Revit</span>
+                    <span>AutoCAD</span>
+                    <span>Aspen Hysys</span>
+                    <span>EES</span>
+                    <span>Simulink</span>
+                    <span>Blender 3D</span>
                 </div>
             </div>
 
-            <div class="skill-box hidden-card">
-                <span class="title">PVsyst (Modelado Solar)</span>
-                <div class="skill-bar">
-                    <span class="skill-per pvsyst">
-                        <span class="tooltip">90%</span>
-                    </span>
+            <div class="skill-category hidden-card">
+                <h3><span class="highlight">//</span> Data Science & AI</h3>
+                <div class="skill-tags">
+                    <span>Python (Pandas/NumPy)</span>
+                    <span>Matlab</span>
+                    <span>Machine Learning</span>
+                    <span>Deep Learning</span>
+                    <span>Limpieza de Datos (Outliers)</span>
+                    <span>Redes Neuronales</span>
                 </div>
             </div>
-
-            <div class="skill-box hidden-card">
-                <span class="title">Excel (Macros/VBA)</span>
-                <div class="skill-bar">
-                    <span class="skill-per excel">
-                        <span class="tooltip">95%</span>
-                    </span>
-                </div>
-            </div>
-
         </div>
     </section>
-    
-    <section id="proyectos">
+
+    <section id="proyectos" class="section-dark">
         <h2 class="section-title hidden-text">Proyectos <span class="highlight">Destacados</span></h2>
         <div class="projects-grid">
-            <div class="card hidden-card">
-                <h3>Comunidad Energética</h3>
-                <p class="tech-stack"><span>PVsyst</span> <span>Python</span></p>
-                <p>Diseño técnico para zonas no interconectadas en La Guajira.</p>
+            
+            <div class="card project-card hidden-card">
+                <div class="card-header">
+                    <h3>Integración FV - PTAP "La Flora"</h3>
+                    <span class="status-badge">Completado</span>
+                </div>
+                <p class="tech-stack">
+                    <span>PVsyst</span> <span>Python</span> <span>CREG 015</span> <span>LCOE Analysis</span>
+                </p>
+                <div class="card-body">
+                    <p>Estudio técnico-financiero completo para la implementación de energía solar en infraestructura crítica. Se analizaron tres escenarios de capacidad:</p>
+                    <ul class="project-details">
+                        <li><strong>Variante 1:</strong> 214 kWp (Baja Inversión)</li>
+                        <li><strong>Variante 2:</strong> 253 kWp (Recomendada - TIR ~53%)</li>
+                        <li><strong>Variante 3:</strong> 423 kWp (Máxima Generación)</li>
+                    </ul>
+                    <div class="project-image-container">
+                        <img src="assets/img/project_analysis.png" alt="Análisis Comparativo PTAP" class="project-img">
+                    </div>
+                    <p class="impact">Impacto: Reducción de huella de carbono y optimización de costos operativos (LCOE ~350 COP/kWh).</p>
+                </div>
             </div>
+
             <div class="card hidden-card">
-                <h3>Portfolio Web</h3>
-                <p class="tech-stack"><span>HTML5</span> <span>CSS3</span> <span>JS</span></p>
-                <p>Plataforma interactiva con animaciones UI/UX y despliegue en GitHub.</p>
+                <h3>Comunidad Energética Guajira</h3>
+                <p class="tech-stack"><span>PVsyst</span> <span>Python</span> <span>GIS</span></p>
+                <p>Diseño de microrredes para zonas no interconectadas (Nazareth y Puerto Estrella). Tesis de Grado.</p>
             </div>
+
         </div>
     </section>
 
-    <section id="contacto" class="section-dark">
+    <section id="contacto">
         <h2 class="hidden-text">¿Hablamos?</h2>
-        <p class="hidden-text">Estoy disponible para nuevas oportunidades en análisis de datos y proyectos de sostenibilidad.</p>
+        <p class="hidden-text">Estoy disponible para nuevos retos en Análisis de Datos y Energía Sostenible.</p>
         <a href="mailto:josebarriosetc@gmail.com" class="btn primary hidden-text">Enviar Correo</a>
     </section>
 
